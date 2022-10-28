@@ -6,7 +6,7 @@ import Tooltip from './moduless/tooltip.js';
 import initDropdownMenu from './moduless/dropdown-menu.js';
 import initMenuMobile from './moduless/menu-mobile.js';
 import initFuncionamento from './moduless/funcionamento.js';
-import initFetchAnimais from './moduless/fetch-animais.js';
+import fetchAnimais from './moduless/fetch-animais.js';
 import initFetchBitcoin from './moduless/fetch-bitcoin.js';
 import initAnimacaoScroll from './moduless/scroll-animacao.js';
 
@@ -25,10 +25,11 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+fetchAnimais('../../animaisapi.json', '.numeros-grid');
 
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchAnimais();
+
 initFetchBitcoin();
 initAnimacaoScroll();
